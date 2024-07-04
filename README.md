@@ -1,0 +1,1 @@
+# paradigmas-del-lenguaje
