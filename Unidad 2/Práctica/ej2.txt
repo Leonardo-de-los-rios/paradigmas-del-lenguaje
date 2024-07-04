@@ -1,0 +1,11 @@
+-- Ejercicio Nº2: Tuplas
+
+1. (fst ("ana","carlos")) --Aplica solo duplas, no sobre triplas, cuadruplas, etc.
+"ana"
+
+2. (snd ("ana","carlos")) --Aplica solo duplas, no sobre triplas, cuadruplas, etc.
+"carlos"
+
+3. (zip [1,2,3,4] ["uno", ['d','o','s'],"tres","cuatro"]) --(zip [1..] ["uno", ['d','o','s'],"tres","cuatro"])
+[(1,"uno"),(2,"dos"),(3,"tres"),(4,"cuatro")] -- crear una lista de duplas, donde la longitud de cada lista xs ys deben ser la misma.
+                                              -- Además, el ['d','o','s'] se convierte en una lista de string

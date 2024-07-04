@@ -1,0 +1,128 @@
+Ejercicio 1
+
+1. (min (max 3 4) (max 7 3))
+    min     4         7
+4
+
+2. (succ 9) + ( max 5 4) + 1
+            10    +     5     + 1
+16
+
+3. (max (succ (max 6 8)) (succ (min 6 8)))
+         (max (succ      8   ) (succ       6))    
+         (max          9                7)
+9
+
+4. (div 15 4) -- División Entera
+3
+
+//Funciones sobre listas. Analizadores de listas: head - tail - last - elem
+
+5. (head [ 3,6,9])
+3
+
+6. (head ['a','b','c'])
+'a'
+
+7. (head "abcd")
+'a'
+
+8. (tail (head (tail ["ab","cd"]))) -- tail: cola de la lista. Retorna lista de la cola, si tiene 1 elemento es []
+   (tail (head            ["cd"]))
+   (tail            "cd")
+"d"
+
+9. impares = [ "uno", "tres"]
+
+10. ("cinco" : impares) // : Constructor de lista. Inserta un elemento en la lista
+["cinco","uno","tres"]
+
+11. (["siete"]++ impares) // ++ Constructor de lista. Concatena
+["siete", "uno", "tres"]
+
+12. impares
+["uno", "tres"]
+
+13. (last impares) -- Retorna el último átomo de la lista
+"tres"
+
+14. uno = [3,1,8,5,4,2]
+
+15. dos = [7,9,3,5,1]
+
+16. (nueva = [(head uno), (head dos)])
+nueva = [3,7]  -- No lo muestra por pantalla
+
+17. (splitAt 3 uno) // Retorna una dupla. Toma los primeros n elementos (3) en este caso y el segundo elemento el resto de elementos
+([3,1,8], [5,4,2])
+
+Si fuese:
+(splitAt 4 uno)
+([3,1,8,5], [4,2])
+
+18. (uno !! 2) -- get value by index
+8
+
+19. (dos !! 0)
+7
+
+20. lista = [(uno !! 2), (dos !! 3)]
+lista = [8,5]
+
+21. (sum uno) -- Suma todos los elemntos de la lista
+23
+
+22. (product dos) -- Multiplica todos los elementos de la lista
+945
+
+23. (null impares) -- Verifica si la lista está vacía. Retorna True en caso de estar vacía, False en caso contrario
+False
+
+24. (reverse impares) -- Retorna la lista pero al revés sus elementos
+["tres","uno"]
+
+25. (take 2 uno) -- Retorna la lista con los primeros n elementos (2 en este caso)
+[3,1]
+
+Si fuese:
+(take 3 uno)
+[3,1,8]
+
+26. (drop 2 dos) -- Retorna la lista sin los primeros n elementos (2 en este caso)
+[3,5,1]
+
+
+27. (maximum dos) -- Obtiene el valor máximo de una lista, a diferencia del max que es entre x e y
+9
+
+28. (minimum impares) -- Obtiene el valor mínimo de una lista, a diferencia del min que es entre x e y
+"tres"
+
+29. (elem "cinco" impares) -- verifica si el elemento x pertenece a ys: elem x ys
+False
+
+30. (elem "seis" impares)
+False
+
+// Evaluaciones con operadores lógicos
+
+31. (not (elem "tres" impares))
+     not          True
+False
+
+32. (notElem "tres" impares) -- Verifica si no está el elemento x en ys
+False
+
+33. ((elem "uno" impares) && (elem "siete" impares))
+             True         &&          False
+False
+
+34. ((elem "uno" impares) || (elem "siete" impares))
+            True          ||          False
+True
+
+35. (length ["Jose","Antonio","Mario"]) -- Retorna la longitud de la lista
+3
+
+36. (length [["Jose","Antonio","Mario"]])
+1

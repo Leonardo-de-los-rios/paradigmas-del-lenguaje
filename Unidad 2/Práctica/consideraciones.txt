@@ -1,0 +1,5 @@
+-- Comentarios de una línea
+{- Comentarios de 
+más de una línea -}
+Para ejecutar un archivo:
+ir a la carpeta del archivo, abrir la terminal, ejecutar el ghci y luego :l <nom_archivo.hs>
