@@ -1,0 +1,23 @@
+% Definimos algunos hechos iniciales
+persona(juan).
+persona(maria).
+persona(pedro).
+
+gusta(juan, pizza).
+gusta(maria, pasta).
+
+% Regla para verificar si a una persona le gusta un tipo de comida
+le_gusta_a(Persona, Comida) :-
+    gusta(Persona, Comida).
+
+% Regla para añadir un nuevo hecho en tiempo de ejecución
+% Si una persona y una comida no están registradas, las añade
+añadir_gusto(Persona, Comida) :-
+    \+ gusta(Persona, Comida), % Verifica que no exista ya el hecho
+    assert(gusta(Persona, Comida)), % Añade el nuevo hecho
+    write('Hecho añadido: '), write(Persona), write(' gusta '), writeln(Comida).
+
+% Si ya existe el hecho, simplemente informa de ello
+añadir_gusto(Persona, Comida) :-
+    gusta(Persona, Comida),
+    write(Persona), write(' ya gusta '), writeln(Comida).

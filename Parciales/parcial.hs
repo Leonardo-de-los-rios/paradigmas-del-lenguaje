@@ -1,6 +1,24 @@
+{- Ejercicio 2:
+Realizar el seguimiento de la siguiente función, para el objetivo: sigue [1,2,3] e indicar la salida. -}
+{-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
+{-# HLINT ignore "Use map" #-}
+
+otra :: (Integral a) => a -> [a] -> [[a]]
+otra x [] = []
+otra x (p:xp) = [x,p] : otra x xp
+
+sigue :: (Integral a) => [a] -> [[a]]
+sigue [] = []
+sigue (x:xs) = otra x xs ++ sigue xs
+
+{- Ejercicio 3:
+Definir la función enlace que reciba como argumento dos listas de pares de elementos y construya una nueva lista de pares de la siguiente manera: 
+
+enlace [[1,2],[5,6],[20,8]] [[6,100],[1,200],[3,300],[2,400],[8,500]]
+-}
+
 -- enlace [[1,2],[5,6],[20,8]] [[6,100],[1,200],[3,300],[2,400],[8,500]]
 -- enlace [[1,2]] [[6,100],[1,200],[3,300],[2,400]]
-
 
 -- Mal
 {-
